@@ -235,7 +235,7 @@ public class PnlParserConfig extends JPanel {
 					
 					if (cmbPrePos.getSelectedIndex() == 0 || (cmbPrePos.getSelectedIndex() == 1 && !parser.isIgnoreFile(responseBody, cmbDefaultParse.getSelectedIndex() == 0)))
 						responseBody = "<%".concat(txtPreScript.getText()).concat("%>").
-							concat(responseBody).
+							concat("\n").concat(responseBody).concat("\n").
 							concat("<%").concat(txtPosScript.getText()).concat("%>");
 					
 					responseBody = parser.parseText(responseBody, testExec, cmbDefaultParse.getSelectedIndex() == 0, ckSupressNewLine.isSelected());
