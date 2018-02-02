@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <soapenv:Body>
+    <findEventosResponse xmlns="http://service.business.fi.obi1">
+      <findEventosReturn>
+        <evenCdTipo xmlns="http://to.business.fi.obi1">1</evenCdTipo>
+        <evenDhEvento xmlns="http://to.business.fi.obi1">10/10/2010</evenDhEvento>
+        <evenDsDescricao xmlns="http://to.business.fi.obi1">Desc META</evenDsDescricao>
+        <evenDsLocal xmlns="http://to.business.fi.obi1">Local META</evenDsLocal>
+        <evenDsTitulo xmlns="http://to.business.fi.obi1">Titulo META</evenDsTitulo>
+        <idEvenCdEvento xmlns="http://to.business.fi.obi1">1</idEvenCdEvento>
+        <tickets xmlns="http://to.business.fi.obi1">
+          <item xmlns="http://service.business.fi.obi1">
+            <idTickCdTicket xmlns="http://to.business.fi.obi1">1</idTickCdTicket>
+            <tickDsDescricao xmlns="http://to.business.fi.obi1">Ing META</tickDsDescricao>
+            <tickNrDisponivel xmlns="http://to.business.fi.obi1">10</tickNrDisponivel>
+            <tickNrValor xmlns="http://to.business.fi.obi1">210</tickNrValor>
+          </item>
+        </tickets>
+      </findEventosReturn>
+    </findEventosResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+

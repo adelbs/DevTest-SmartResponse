@@ -1,0 +1,12 @@
+
+# ----- Custom steps
+
+nodes=\
+com.ca.smartresponse.SmartResponseNode
+
+nodeCategories=SmartResponse
+
+SmartResponse=\
+com.ca.smartresponse.SmartResponseNode
+
+com.ca.smartresponse.SmartResponseNode=com.ca.smartresponse.SmartResponseNodeInfo,com.ca.smartresponse.SmartResponseCustomEditor

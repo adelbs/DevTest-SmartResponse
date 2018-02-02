@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="build2Devtest" name="Creates Jar">
+	
+	<property name="devtestDir" value="C:/CA/DevTest" />
+	<property name="hotDeployDir" value="${devtestDir}/hotDeploy/" />
+	<property name="sharedDir" value="${devtestDir}/lib/shared/" />
+	
+    <target name="build2Devtest">
+    	<delete>
+    	    <fileset dir="build/" includes="CST-*" />
+    	</delete>
+    	
+    	<ant antfile="build.xml" target="buildJar" />
+    	
+		<delete failonerror="false">
+			<fileset dir="${hotDeployDir}" includes="CST-SmartResponse*" />
+			<fileset dir="${sharedDir}" includes="CST-SmartResponse*" />
+		</delete>
+    	
+    	<copy todir="${hotDeployDir}" overwrite="false">
+    		<fileset dir="build/" includes="CST-*" />
+    	</copy>
+
+    	<copy todir="${sharedDir}" overwrite="false">
+    		<fileset dir="build/" includes="CST-*" />
+    	</copy>
+    </target>
+	
+</project>

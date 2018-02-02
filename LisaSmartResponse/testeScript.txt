@@ -1,0 +1,19 @@
+<%
+setSupressNewLine(false);
+%>
+Inicio do arquivo
+linha 2
+ 
+<%
+ExcelReader excel = new ExcelReader("c:\\Users\\jacfe02\\Desktop\\DadosTeste-v2.xlsx");
+
+excel.gotoRow("id", "6.0");
+%>
+
+ID = <%print(excel.getCel("id"));%>
+NOME = <%print(excel.getCel("nome"));%>
+VALOR = <%print(excel.getCel("valor"));%>
+=================================================================================
+
+
+fim
